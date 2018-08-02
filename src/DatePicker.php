@@ -63,7 +63,7 @@ class DatePicker extends InputWidget
 	 * Initializes the widget.
 	 * If you override this method, make sure you call the parent implementation first.
 	 *
-	 * @return void
+	 * @return string
 	 */
 	public function init()
 	{
