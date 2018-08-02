@@ -17,6 +17,7 @@
                     \yii\bootstrap4\Alert,
                     \yii\helpers\ArrayHelper,
                     \yii\helpers\Html,
+                    \yii\helpers\Json,
                     \yii\helpers\Url,
                 </value>
             </property>

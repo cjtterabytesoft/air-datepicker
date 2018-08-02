@@ -8,12 +8,12 @@
     "support": {
         "issues": "https://github.com/cjtterabytesoft/air-datepicker/issues",
         "source": "https://github.com/cjtterabytesoft/air-datepicker/widgets",
-        "forum":  "https://discuss.tusoporte.net"
+        "forum":  "https://discuss.cjtterabyte.com"
     },
     "authors": [
         {
             "name": "Wilmer Arambula",
-            "email": "terabytefrelance@gmail.com"
+            "email": "github@cjtterabyte.com"
         }
     ],
     "minimum-stability": "dev",
@@ -21,7 +21,7 @@
     "require": {
         "php": ">=7.1.0",
         "yiisoft/yii2": "~3.0@dev",
-        "yiisoft/yii2-bootstrap4": "2.0.x-dev"
+        "bower-asset/air-datepicker": "^2.2"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "2.1.x-dev",
