@@ -23,21 +23,20 @@ use yii\widgets\InputWidget;
 /**
  * Class AirDatePicker
  * Manual http://t1m0n.name/air-datepicker/docs/index-ru.html
- * GitHub https://github.com/t1m0n/air-datepicker
- * @package mrserg161\airdatepicker
+ * GitHub https://github.com/t1m0n/air-datepicker.
  * @author Malovichko Sergey <mrSerg161@gmail.com>
  */
 class DatePicker extends InputWidget
 {
 	/**
-	 * template
+	 * template.
 	 *
 	 * @var string
 	 */
 	public $template = '{input}';
 
 	/**
-	 * options
+	 * options.
 	 *
 	 * @var array
 	 */
@@ -46,14 +45,14 @@ class DatePicker extends InputWidget
 	];
 
 	/**
-	 * clientOptions
+	 * clientOptions.
 	 *
 	 * @var array
 	 */
 	public $clientOptions = [];
 
 	/**
-	 * clientEvents
+	 * clientEvents.
 	 *
 	 * @var array
 	 */
@@ -63,7 +62,7 @@ class DatePicker extends InputWidget
 	 * Initializes the widget.
 	 * If you override this method, make sure you call the parent implementation first.
 	 *
-	 * @return string
+	 * @return void
 	 */
 	public function init()
 	{
@@ -78,7 +77,7 @@ class DatePicker extends InputWidget
 	 * Run the widget.
 	 * If you override this method, make sure you call the parent implementation first.
 	 *
-	 * @return void
+	 * @return string
 	 */
 	public function run()
 	{
