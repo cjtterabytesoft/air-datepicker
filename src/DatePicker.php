@@ -71,6 +71,13 @@ class DatePicker extends InputWidget
 		if (!isset($this->options['id'])) {
 			$this->options['id'] = $this->hasModel() ? Html::getInputId($this->model, $this->attribute) : $this->getId();
 		}
+
+		if (isset($this->clientOptions['language'])) {
+			$lang = $this->clientOptions['language'];
+			$this->view->registerJsFile($asset->baseUrl . "/js/i18n/datepicker.$lang.js", [
+				'depends' => DatePickerAsset::class,
+			]);
+		}
 	}
 
 	/**
@@ -84,13 +91,6 @@ class DatePicker extends InputWidget
 		$asset = new DatePickerAsset();
 		$asset->register($this->view);
 
-		if (isset($this->clientOptions['language'])) {
-			$lang = $this->clientOptions['language'];
-			$this->view->registerJsFile($asset->baseUrl . "/js/i18n/datepicker.$lang.js", [
-				'depends' => DatePickerAsset::class,
-			]);
-		}
-
 		$id = $this->options['id'];
 		$options = empty($this->clientOptions) ? '' : Json::encode($this->clientOptions);
 		$js = "jQuery('#$id').datepicker($options)";
@@ -100,6 +100,7 @@ class DatePicker extends InputWidget
 		if ($value = $this->model->$_attr) {
 			$this->clientEvents = array_merge($this->clientEvents, ['selectDate' => 'new Date(' . strtotime($value) * 1000 . ')']);
 		}
+		
 		foreach ($this->clientEvents as $event => $handler) {
 			$js .= ".data('datepicker').$event($handler)";
 		}
