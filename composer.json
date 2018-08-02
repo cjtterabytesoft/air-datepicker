@@ -21,6 +21,7 @@
     "require": {
         "php": ">=7.1.0",
         "yiisoft/yii2": "~3.0@dev",
+        "yiisoft/yii2-bootstrap4": "2.0.x-dev",
         "bower-asset/air-datepicker": "^2.2"
     },
     "require-dev": {
