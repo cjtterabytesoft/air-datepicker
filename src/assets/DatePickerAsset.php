@@ -28,7 +28,7 @@ class DatePickerAsset extends AssetBundle
 	public $js = [
 		'js/datepicker.js',
 	];
-	
+
 	public $depends = [
 		\yii\jquery\YiiAsset::class,
 		\yii\bootstrap4\BootstrapAsset::class,
